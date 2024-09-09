@@ -23,12 +23,22 @@ export const createProperty = async (req, res) => {
 
   export const getProperty = async (req, res) => {
     try {
-      const property = await Property.findAll();
+      const property = await Property.findAll({
+        include: [
+          {
+            model: User,
+          },
+          {
+            model: Transaction,
+          }
+        ]
+      });
       res.status(200).json(property);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
-  };
+};
+
 
   export const getPropertyById = async (req, res) => {
     try {

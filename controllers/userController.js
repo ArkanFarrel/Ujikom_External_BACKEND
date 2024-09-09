@@ -2,6 +2,8 @@ import User from "../model/UserModel.js";
 import Transaction from "../model/transaksiModel.js";
 import Property from "../model/propertyModel.js";
 
+
+
 export const createUser = async (req, res) => {
     try {
       const { name, email, phone, role } = req.body;
