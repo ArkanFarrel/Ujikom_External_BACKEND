@@ -50,11 +50,11 @@ const Property = db.define(
     }
 );
 
-Property.belongsTo(User, {
-    foreignKey: 'UserId',
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE',
-  });
+// Property.belongsTo(User, {
+//     foreignKey: 'UserId',
+//     onDelete: 'CASCADE',
+//     onUpdate: 'CASCADE',
+//   });
 
   
   Property.hasMany(Transaction, {

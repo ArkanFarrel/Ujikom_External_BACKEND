@@ -3,11 +3,12 @@ import db from "../utils/database.js";
 import Transaction from "./transaksiModel.js";
 
 const Ulasan = db.define(
-    "Ulasan",{
+    "Ulasan",
+    {
         rating: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {min: 1, max: 5},
+            validate: {min: 1, max: 100},
         },
         comment: {
             type: DataTypes.TEXT,

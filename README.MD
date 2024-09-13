@@ -97,7 +97,7 @@
 
 - **Class Diagram**
 
-<img src="./image/CDiagram.png" />
+<img src="./image/cDiagram.png" />
 
 <br>
 
@@ -110,7 +110,7 @@
 
 - **Relasi Table**
 
-<img src="./image/relasi.jpeg" />
+<img src="./image/relasii.jpeg" />
 
 <br>
 <br>

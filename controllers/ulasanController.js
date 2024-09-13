@@ -12,11 +12,20 @@ export const createUlasan = async (req, res) => {
             comment
         });
         
-        res.status(201).json( ulasan );
+        res.status(201).json(ulasan);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
+export const getUlasan = async (req, res) => {
+    try {
+      const ulasan = await Ulasan.findAll();
+      res.status(200).json(ulasan);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
 
 export const getUlasanById = async (req, res) => {
     try {

@@ -1,8 +1,9 @@
-import User from "../model/userModel.js";
+import User from "../model/UserModel.js";
 import Property from "../model/propertyModel.js";
 import Transaction from "../model/transaksiModel.js";
 import Ulasan from "../model/ulasanModel.js";
 import Admin from "../model/adminModel.js";
+import { DataTypes } from "sequelize";
 
 const createSeeder = async () => {
     const user = await User.create({
@@ -53,7 +54,8 @@ const createSeeder = async () => {
     });
 
     // const ulasan = await Ulasan.create({
-    //     Rating: rating.dataValues.id
+    //     Rating: ulasan.dataValues.id,
+    //     Comment: DataTypes.TEXT
     // });
 
     const admin = await Admin.create({
@@ -84,3 +86,6 @@ console.log(transaction.dataValues);
 
   console.log("==== INI ADALAH DATA ADMIN ====");
 console.log(admin.dataValues);
+
+//   console.log("==== INI ADALAH DATA ULASAN ====");
+// console.log(ulasan.dataValues);

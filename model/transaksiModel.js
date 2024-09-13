@@ -47,8 +47,7 @@ const Transaction = db.define(
   }
 }, 
 {
-  tableName: 'transaction',  // Nama tabel di database
-//   timestamps: false
+  tableName: 'transaction',
 }
 );
 
