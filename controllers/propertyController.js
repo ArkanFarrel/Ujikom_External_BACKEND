@@ -45,7 +45,7 @@ export const createProperty = async (req, res) => {
       const { id } = req.params;
       const property = await Property.findByPk(id);
       if (!property) return res.status(404).json({ message: "Property tidak dapat ditemukan" });
-      res.status(200).json(film);
+      res.status(200).json(property);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

@@ -2,11 +2,11 @@ import { DataTypes } from "sequelize";
 import db from "../utils/database.js";
 import Property from "./propertyModel.js";
 import Transaction from "./transaksiModel.js";
-import Ulasan from "./ulasanModel.js";
+import User from "./UserModel.js";
 
-const User = db.define(
+const Admin = db.define(
   // memberikan nama model dengan nama User, secara default jika tidak memberikan tablename maka akan menjadi nama jamak
-  "User",
+  "Admin",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,11 +24,21 @@ const User = db.define(
     },
   },
   {
-    tableName: "user",
+    tableName: "admin",
   }
 );
 
-// relasi User ke Book
+Admin.belongsTo(User, {
+    foreignKey: 'UserId',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  });
+Admin.hasMany(Property, {
+    foreignKey: 'PropertyId',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  });
+
 
 // artinya User bisa memiliki banyak buku
 // User.hasMany (Property, {
@@ -38,7 +48,7 @@ const User = db.define(
 // })
 
 // //  Buku dimiliki satu user
-// User.belongsTo(Ulasan, {
+// Property.belongsTo(User, {
 //     foreignKey: "UserId",
 //     onDelete: "CASCADE",
 //     onUpdate: "CASCASE",
@@ -57,4 +67,4 @@ const User = db.define(
 
 // await User.sync({ force: true });
 
-export default User;
+export default Admin;

@@ -32,7 +32,7 @@ export const createTransaction = async (req, res) => {
       const { id } = req.params;
       const transaction = await Transaction.findByPk(id);
       if (!transaction) return res.status(404).json({ message: "Belum Melakukan Transaksi" });
-      res.status(200).json(film);
+      res.status(200).json(transaction);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

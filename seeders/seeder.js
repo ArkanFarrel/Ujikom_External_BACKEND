@@ -1,6 +1,8 @@
 import User from "../model/userModel.js";
 import Property from "../model/propertyModel.js";
 import Transaction from "../model/transaksiModel.js";
+import Ulasan from "../model/ulasanModel.js";
+import Admin from "../model/adminModel.js";
 
 const createSeeder = async () => {
     const user = await User.create({
@@ -49,17 +51,36 @@ const createSeeder = async () => {
         Status: 'Sukses',                    
         Agent: 'John Doe',                   
     });
-    return { user , findPropertyByUser, transaction };
+
+    // const ulasan = await Ulasan.create({
+    //     Rating: rating.dataValues.id
+    // });
+
+    const admin = await Admin.create({
+        name: "admin farrel",
+        email: "Farrel.doe@gmail.com",
+        phone: "0832723273879123",
+        role: "admin",
+    })
+    return { user , findPropertyByUser, transaction, admin };
 
 };
-const { user, findPropertyByUser: users, transaction } = await createSeeder();
+const { user, findPropertyByUser: users, transaction, admin } = await createSeeder();
 
 console.log("==== INI ADALAH DATA USER ====");
 console.log(user);
 console.log("==== INI ADALAH DATA PROPERTY ====");
+// console.log(property);
 users.map((item) => {
     console.log(item.dataValues);
   });
 
   console.log("==== INI ADALAH DATA TRANSACTION ====");
 console.log(transaction.dataValues);
+
+//   console.log("==== INI ADALAH DATA ulasan ====");
+// console.log(ulasan.dataValues);
+
+
+  console.log("==== INI ADALAH DATA ADMIN ====");
+console.log(admin.dataValues);

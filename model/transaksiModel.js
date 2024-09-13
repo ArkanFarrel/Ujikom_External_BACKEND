@@ -6,6 +6,7 @@ import { DataTypes } from 'sequelize'; // Atur koneksi database
 // import User1 from './UserModel.js';
 import Property from './propertyModel.js';
 import User from './UserModel.js';
+import Ulasan from './ulasanModel.js';
 
 
 const Transaction = db.define(
@@ -19,7 +20,7 @@ const Transaction = db.define(
   PropertyId: {
     type: DataTypes.INTEGER,
     references: {
-      model: 'property',  // Nama tabel Properti (sesuaikan dengan model yang kamu punya)
+      model: 'property',
       key: 'id'
     },
     allowNull: false
@@ -27,7 +28,7 @@ const Transaction = db.define(
   UserId: {
     type: DataTypes.INTEGER,
     references: {
-      model: 'user',  // Nama tabel Pengguna
+      model: 'user', 
       key: 'id'
     },
     allowNull: false
@@ -51,11 +52,12 @@ const Transaction = db.define(
 }
 );
 
-// Transaction.belongsTo(Property, {
-//     foreignKey: 'PropertyId',
+// Transaction.hasMany(Ulasan, {
+//     foreignKey: 'UserId',
 //     onDelete: 'CASCADE',
 //     onUpdate: 'CASCADE',
-// });
+//   });
+
 
 // Transaction.belongsTo(User, {
 //     foreignKey: 'UserId',
