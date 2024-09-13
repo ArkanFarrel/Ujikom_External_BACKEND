@@ -4,9 +4,9 @@ import { DataTypes } from 'sequelize'; // Atur koneksi database
 // import User from './userModel.js';
 // import Property from './propertyModel.js';
 // import User1 from './UserModel.js';
-import Property from './propertyModel.js';
-import User from './UserModel.js';
-import Ulasan from './ulasanModel.js';
+// import Property from './propertyModel.js';
+// import User from './UserModel.js';
+// import Ulasan from './ulasanModel.js';
 
 
 const Transaction = db.define(

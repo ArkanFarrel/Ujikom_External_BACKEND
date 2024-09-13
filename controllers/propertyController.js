@@ -39,6 +39,15 @@ export const createProperty = async (req, res) => {
     }
 };
 
+// export const getProperty = async (req, res) => {
+//     try {
+//       const property = await Property.findAll();
+//       res.status(200).json(property);
+//     } catch (error) {
+//       res.status(500).json({ error: error.message });
+//     }
+//   };
+
 
   export const getPropertyById = async (req, res) => {
     try {
@@ -75,7 +84,7 @@ export const createProperty = async (req, res) => {
       const { id } = req.params;
       const deleted = await Property.destroy({ where: { id } });
       if (deleted) {
-        res.status(204).end();
+        res.status(404).json({ message: "Data Property Berhasil Dihapus"});
       } else {
         res.status(404).json({ message: "Property Tidak Ditemukan" });
       }

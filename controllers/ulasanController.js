@@ -20,7 +20,16 @@ export const createUlasan = async (req, res) => {
 
 export const getUlasan = async (req, res) => {
     try {
-      const ulasan = await Ulasan.findAll();
+      const ulasan = await Ulasan.findAll({
+        include: [
+            {
+                model: User,
+            },
+            {
+                model: Property
+            }
+        ]
+      });
       res.status(200).json(ulasan);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -62,7 +71,7 @@ export const getUlasanById = async (req, res) => {
       const { id } = req.params;
       const deleted = await Ulasan.destroy({ where: { id } });
       if (deleted) {
-        res.status(204).end();
+        res.status(404).json({ message: "Data Ulasan Berhasil Dihapus Dari Database"});
       } else {
         res.status(404).json({ message: "Ulasan Tidak Dapat Ditemukan" });
       }

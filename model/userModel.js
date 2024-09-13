@@ -28,33 +28,6 @@ const User = db.define(
   }
 );
 
-// relasi User ke Book
-
-// artinya User bisa memiliki banyak buku
-// User.hasMany (Property, {
-//     //* cascade digunakan ketika data di tabel referensi dihapus, maka data yang terkait di tabel ini juga akan dihapus
-//     onDelete: "CASCADE",
-//     onUpdate: "CASCADE",
-// })
-
-// //  Buku dimiliki satu user
-// User.belongsTo(Ulasan, {
-//     foreignKey: "UserId",
-//     onDelete: "CASCADE",
-//     onUpdate: "CASCASE",
-// })
-
-// User.hasMany(Property, {
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
-  
-//   User.hasMany(Transaction, {
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
-
-
 // await User.sync({ force: true });
 
 export default User;

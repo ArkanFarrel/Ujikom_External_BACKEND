@@ -1,6 +1,4 @@
 import User from "../model/UserModel.js";
-import Transaction from "../model/transaksiModel.js";
-import Property from "../model/propertyModel.js";
 
 
 
@@ -65,7 +63,7 @@ export const createUser = async (req, res) => {
       const { id } = req.params;
       const deleted = await User.destroy({ where: { id } });
       if (deleted) {
-        res.status(404).json({ message: "Data User Berhasil Dihapus"});
+        res.status(404).json({ message: "Data User Berhasil Dihapus dari Database"});
       } else {
         res.status(404).json({ message: "User Tidak Ditemukan" });
       }

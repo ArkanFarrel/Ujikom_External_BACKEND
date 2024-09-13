@@ -1,6 +1,6 @@
 import User from "../model/UserModel.js";
-import Transaction from "../model/transaksiModel.js";
-import Property from "../model/propertyModel.js";
+// import Transaction from "../model/transaksiModel.js";
+// import Property from "../model/propertyModel.js";
 import Admin from "../model/adminModel.js";
 
 
@@ -66,7 +66,7 @@ export const createAdmin = async (req, res) => {
       const { id } = req.params;
       const deleted = await Admin.destroy({ where: { id } });
       if (deleted) {
-        res.status(204).end();
+        res.status(404).json({ message: "Data Admin Berhasil Dihapus Dari Database"});
       } else {
         res.status(404).json({ message: "Admin Tidak Ditemukan" });
       }

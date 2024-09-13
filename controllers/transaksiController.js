@@ -62,7 +62,7 @@ export const createTransaction = async (req, res) => {
       const { id } = req.params;
       const deleted = await Transaction.destroy({ where: { id } });
       if (deleted) {
-        res.status(204).end();
+        res.status(404).json({ message: "Data Transaksi Berhasil Dihapus Dari Database"});
       } else {
         res.status(404).json({ message: "Transaksi Tidak Dapat Ditemukan" });
       }

@@ -28,41 +28,11 @@ const Admin = db.define(
   }
 );
 
-Admin.belongsTo(User, {
-    foreignKey: 'UserId',
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE',
-  });
 Admin.hasMany(Property, {
     foreignKey: 'PropertyId',
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   });
-
-
-// artinya User bisa memiliki banyak buku
-// User.hasMany (Property, {
-//     //* cascade digunakan ketika data di tabel referensi dihapus, maka data yang terkait di tabel ini juga akan dihapus
-//     onDelete: "CASCADE",
-//     onUpdate: "CASCADE",
-// })
-
-// //  Buku dimiliki satu user
-// Property.belongsTo(User, {
-//     foreignKey: "UserId",
-//     onDelete: "CASCADE",
-//     onUpdate: "CASCASE",
-// })
-
-// User.hasMany(Property, {
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
-  
-//   User.hasMany(Transaction, {
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
 
 
 // await User.sync({ force: true });

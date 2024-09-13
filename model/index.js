@@ -12,10 +12,4 @@ await Transaction.sync();
 await Ulasan.sync();
 await Admin.sync();
 
-// Ulasan.belongsTo(Transaction, {
-//     foreignKey: 'UserId',
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
-
 await db.sync();

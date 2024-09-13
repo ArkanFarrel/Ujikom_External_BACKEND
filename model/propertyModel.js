@@ -50,17 +50,17 @@ const Property = db.define(
     }
 );
 
-// Property.belongsTo(User, {
-//     foreignKey: 'UserId',
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
+Property.hasMany(User, {
+    foreignKey: 'UserId',
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
+  });
 
   
-  Property.hasMany(Transaction, {
+  Property.belongsTo(Transaction, {
     foreignKey: 'PropertyId',
     onDelete: 'CASCADE',
-    onUpdate: 'CASCADE',
+    onUpdate: 'CASCADE'
   });
 
 // await Book.sync({ force: true });
