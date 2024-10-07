@@ -2,24 +2,23 @@ import User from "../model/UserModel.js";
 import Transaction from "../model/transaksiModel.js";
 import Property from "../model/propertyModel.js";
 
-export const createProperty = async (req, res) => {
-    try {
-      const { name, price, location, size, status, description} = req.body;
-  
-      const property = await Property.create({
-        name,
-        price,
-        location,
-        size,
-        status,
-        description
-      });
-  
-      res.status(201).json(property);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  };
+  export const createProperty = async (req, res) => {
+      try {
+        const { name, price, location, status, description} = req.body;
+    
+        const property = await Property.create({
+          name,
+          price,
+          location,
+          status,
+          description
+        });
+    
+        res.status(201).json(property);
+      } catch (error) {
+        res.status(500).json({ error: error.message });
+      }
+    };
 
   export const getProperty = async (req, res) => {
     try {
@@ -84,7 +83,7 @@ export const createProperty = async (req, res) => {
       const { id } = req.params;
       const deleted = await Property.destroy({ where: { id } });
       if (deleted) {
-        res.status(404).json({ message: "Data Property Berhasil Dihapus"});
+        res.status(200).json({ message: "Data Property Berhasil Dihapus" });
       } else {
         res.status(404).json({ message: "Property Tidak Ditemukan" });
       }
@@ -92,3 +91,4 @@ export const createProperty = async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   };
+  

@@ -18,6 +18,7 @@ export const createUlasan = async (req, res) => {
     }
 };
 
+
 export const getUlasan = async (req, res) => {
     try {
       const ulasan = await Ulasan.findAll({

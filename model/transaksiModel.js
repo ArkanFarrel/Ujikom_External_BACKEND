@@ -1,12 +1,6 @@
 import db from '../utils/database.js';
 
 import { DataTypes } from 'sequelize'; // Atur koneksi database
-// import User from './userModel.js';
-// import Property from './propertyModel.js';
-// import User1 from './UserModel.js';
-// import Property from './propertyModel.js';
-// import User from './UserModel.js';
-// import Ulasan from './ulasanModel.js';
 
 
 const Transaction = db.define(
@@ -19,10 +13,10 @@ const Transaction = db.define(
   },
   PropertyId: {
     type: DataTypes.INTEGER,
-    references: {
-      model: 'property',
-      key: 'id'
-    },
+    // references: {
+    //   model: 'property',
+    //   key: 'id'
+    // },
     allowNull: false
   },
   UserId: {

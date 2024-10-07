@@ -25,10 +25,23 @@ const Property = db.define(
     type: DataTypes.STRING,
     allowNull: false,
   },
-  size: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
+
+  // PropertyId: {
+  //   type: DataTypes.INTEGER,
+  //   references: {
+  //     model: 'property',
+  //     key: 'id'
+  //   },
+  //   allowNull: false
+  // },
+//   UserId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//       model: 'user', 
+//       key: 'id'
+//     },
+//     allowNull: false
+//   },
   status: {
     type: DataTypes.ENUM,
     values: ['available', 'sold', 'rented'],
@@ -36,11 +49,6 @@ const Property = db.define(
     defaultValue: 'available',
   },
   description: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  },
-
-  transaksi: {
     type: DataTypes.TEXT,
     allowNull: true,
   },

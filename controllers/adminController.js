@@ -1,4 +1,3 @@
-import User from "../model/UserModel.js";
 // import Transaction from "../model/transaksiModel.js";
 // import Property from "../model/propertyModel.js";
 import Admin from "../model/adminModel.js";
@@ -7,16 +6,14 @@ import Admin from "../model/adminModel.js";
 
 export const createAdmin = async (req, res) => {
     try {
-      const { name, email, phone, role } = req.body;
+      const { name, email} = req.body;
   
-      const user = await User.create({
+      const admin = await Admin.create({
         name,
         email,
-        phone,
-        role
       });
   
-      res.status(201).json(user);
+      res.status(201).json(admin);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -45,9 +42,9 @@ export const createAdmin = async (req, res) => {
   export const updateAdmin = async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, email, phone, role } = req.body;
+      const { name, email } = req.body;
       const [updated] = await Admin.update(
-        { name, email, phone, role },
+        { name, email },
         { where: { id } }
       );
       if (updated) {

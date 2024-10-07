@@ -1,8 +1,5 @@
 import { DataTypes } from "sequelize";
 import db from "../utils/database.js";
-import Property from "./propertyModel.js";
-import Transaction from "./transaksiModel.js";
-import Ulasan from "./ulasanModel.js";
 
 const User = db.define(
   // memberikan nama model dengan nama User, secara default jika tidak memberikan tablename maka akan menjadi nama jamak

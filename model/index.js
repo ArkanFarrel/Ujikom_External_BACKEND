@@ -1,4 +1,3 @@
-import "../model/index.js";
 import Property from "./propertyModel.js";
 import User from "./UserModel.js";
 import Transaction from "./transaksiModel.js";

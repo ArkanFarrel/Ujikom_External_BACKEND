@@ -14,7 +14,6 @@ router.delete("/property/delete/:id", deleteProperty);
 router.get("/property/find/:id", getPropertyById);
 router.put("/property/update/:id", updateProperty);
 
-
 // USER
 router.get("/user", getUser);
 router.get("/user/find/:id", getUserById);
