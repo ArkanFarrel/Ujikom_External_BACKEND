@@ -1,8 +1,5 @@
 import { DataTypes } from "sequelize";
 import db from "../utils/database.js";
-// import Property from "./propertyModel.js";
-// import Transaction from "./transaksiModel.js";
-// import User from "./UserModel.js";
 
 const Admin = db.define(
   // memberikan nama model dengan nama User, secara default jika tidak memberikan tablename maka akan menjadi nama jamak
@@ -14,11 +11,15 @@ const Admin = db.define(
       autoIncrement: true,
       allowNull: false,
     },
-    name: {
+    // name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
