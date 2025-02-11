@@ -1,16 +1,14 @@
+import 'dotenv/config'
 import User from "../model/UserModel.js";
-
 
 
 export const createUser = async (req, res) => {
     try {
-      const { name, email, phone, role } = req.body;
+      const { email, password } = req.body;
   
       const user = await User.create({
-        name,
         email,
-        phone,
-        role
+        password,
       });
   
       res.status(201).json(user);
@@ -42,9 +40,9 @@ export const createUser = async (req, res) => {
   export const updateUser = async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, email, phone, role } = req.body;
+      const { name, email, password } = req.body;
       const [updated] = await User.update(
-        { name, email, phone, role },
+        { name, email, password },
         { where: { id } }
       );
       if (updated) {

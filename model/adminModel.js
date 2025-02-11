@@ -1,41 +1,27 @@
 import { DataTypes } from "sequelize";
-import db from "../utils/database.js";
+import db from "../utils/database.js"
 
 const Admin = db.define(
-  // memberikan nama model dengan nama User, secara default jika tidak memberikan tablename maka akan menjadi nama jamak
   "Admin",
   {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    // name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // password: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
   },
   {
     tableName: "admin",
+    timestamps: true,
+    freezeTableName: true
   }
 );
-
-// Admin.hasMany(Property, {
-//     foreignKey: 'PropertyId',
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE',
-//   });
-
-
-// await User.sync({ force: true });
 
 export default Admin;

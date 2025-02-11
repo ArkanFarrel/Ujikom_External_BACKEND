@@ -14,14 +14,14 @@ const Ulasan = db.define(
             type: DataTypes.TEXT,
         },
 
-        UserId: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'user', 
-              key: 'id'
-            },
-            allowNull: false
-          },
+        // UserId: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'user', 
+        //       key: 'id'
+        //     },
+        //     allowNull: false
+        //   },
         
     },
     {

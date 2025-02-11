@@ -19,14 +19,14 @@ const Transaction = db.define(
     // },
     allowNull: false
   },
-  UserId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: 'user', 
-      key: 'id'
-    },
-    allowNull: false
-  },
+  // UserId: {
+  //   type: DataTypes.INTEGER,
+  //   references: {
+  //     model: 'user', 
+  //     key: 'id'
+  //   },
+  //   allowNull: false
+  // },
   TransactionDate: {
     type: DataTypes.DATE,
     allowNull: false

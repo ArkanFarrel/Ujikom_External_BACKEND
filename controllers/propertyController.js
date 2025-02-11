@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import User from "../model/UserModel.js";
 import Transaction from "../model/transaksiModel.js";
 import Property from "../model/propertyModel.js";
@@ -23,14 +24,14 @@ import Property from "../model/propertyModel.js";
   export const getProperty = async (req, res) => {
     try {
       const property = await Property.findAll({
-        include: [
-          {
-            model: User,
-          },
-          {
-            model: Transaction,
-          }
-        ]
+        // include: [
+        //   {
+        //     model: User,
+        //   },
+        //   {
+        //     model: Transaction,
+        //   }
+        // ]
       });
       res.status(200).json(property);
     } catch (error) {
@@ -62,9 +63,9 @@ import Property from "../model/propertyModel.js";
   export const updateProperty = async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, price, location, size, status, description } = req.body;
+      const { name, price, location, status, description } = req.body;
       const [updated] = await Property.update(
-        { name, price, location, size, status, description  },
+        { name, price, location, status, description  },
         { where: { id } }
       );
       if (updated) {
