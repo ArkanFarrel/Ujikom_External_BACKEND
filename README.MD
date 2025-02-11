@@ -1,4 +1,4 @@
-# RESTFULL API JUAL BELI RUMAH / PROPERTY
+# UJIKOM INTERNAL ( BACKEND ) - Property Management Application 
 <br>
 
 ## Deskripsi Projek 

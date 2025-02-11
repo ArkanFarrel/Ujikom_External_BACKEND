@@ -6,7 +6,7 @@ import Admin from '../model/adminModel.js';
 
 export const createAdmin = async (req, res) => {
     try {
-      const { email, password} = req.body;
+      const { email, password } = req.body;
   
       const admin = await Admin.create({
         email,
@@ -42,9 +42,9 @@ export const createAdmin = async (req, res) => {
   export const updateAdmin = async (req, res) => {
     try {
       const { id } = req.params;
-      const { name, email, password } = req.body;
+      const { email, password } = req.body;
       const [updated] = await Admin.update(
-        { name, email, password },
+        { email, password },
         { where: { id } }
       );
       if (updated) {

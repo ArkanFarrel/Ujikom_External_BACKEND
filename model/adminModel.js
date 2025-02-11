@@ -12,10 +12,10 @@ const Admin = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // password: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     tableName: "admin",

@@ -9,12 +9,12 @@ const createSeeder = async () => {
     const user = await User.create({
         name: "Farrel Doe",
         email: "Farrel.doe@gmail.com",
-        password: "farrel123",
+        // password: "farrel123",
     });
     const user1 = await User.create({
         name: "Farrel Doe",
         email: "Farrel.doe@gmail.com",
-        password: "farrel123",
+        // password: "farrel123",
     });
 
     const property = await Property.create({
