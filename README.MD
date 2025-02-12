@@ -103,7 +103,7 @@
 
 - **ERD (Entity Relationship Diagram)**
 
-<img src="image/ujikom-erd.png" />
+<img src="https://raw.githubusercontent.com/ArkanFarrel/Ujikom_Internal_BACKEND/main/image/ujikom-erd.jpg" />
 
 <br>
 
