@@ -116,7 +116,7 @@
 
 - **Relasi Table**
 
-<img src="./image/relasii.jpeg" />
+<img src="./image/UJIKOM-USECASE_DIAGRAM.jpeg" />
 
 <br>
 
