@@ -97,22 +97,29 @@
 
 - **Class Diagram**
 
-<img src="./image/cDiagram.png" />
+<img src="./image/UJIKOM-CLASS_DIAGRAM.PNG" />
 
 <br>
 
 - **ERD (Entity Relationship Diagram)**
 
-<img src="./image/ERD.png" />
+<img src="./image/UJIKOM-ERD.png" />
 
 <br>
 
+
+- **Usecase Diagram**
+
+<img src="./image/UJIKOM-USECASE_DIAGRAM.PNG" />
+
+<br>
 
 - **Relasi Table**
 
 <img src="./image/relasii.jpeg" />
 
 <br>
+
 <br>
 <br>
 
