@@ -26,22 +26,6 @@ const Property = db.define(
     allowNull: false,
   },
 
-  // PropertyId: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: 'property',
-  //     key: 'id'
-  //   },
-  //   allowNull: false
-  // },
-  // UserId: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: 'user', 
-  //     key: 'id'
-  //   },
-  //   allowNull: false
-  // },
   status: {
     type: DataTypes.ENUM,
     values: ['available', 'sold', 'rented'],
@@ -58,18 +42,4 @@ const Property = db.define(
     }
 );
 
-// Property.hasMany(User, {
-//     foreignKey: 'UserId',
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE'
-//   });
-
-  
-//   Property.belongsTo(Transaction, {
-//     foreignKey: 'PropertyId',
-//     onDelete: 'CASCADE',
-//     onUpdate: 'CASCADE'
-//   });
-
-// await Book.sync({ force: true });
 export default Property;
