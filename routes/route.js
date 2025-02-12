@@ -23,7 +23,7 @@ router.delete("/user/delete/:id", deleteUser);
 router.put("/user/update/:id", updateUser);
 
 // ADMIN
-router.get("/admin", verifyToken, getAdmin);
+router.get("/admin", getAdmin);
 router.get("/admin/find/:id", getAdminById);
 router.post("/admin/post", createAdmin);
 router.delete("/admin/delete/:id", deleteAdmin);

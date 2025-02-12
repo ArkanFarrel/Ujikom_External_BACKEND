@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import db from "../utils/database.js";
-import User from "./UserModel.js";
+// import User from "./UserModel.js";
 import Transaction from "./transaksiModel.js";
 
 const Property = db.define(

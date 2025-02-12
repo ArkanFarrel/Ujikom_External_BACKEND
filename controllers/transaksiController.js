@@ -4,12 +4,12 @@ import Property from "../model/propertyModel.js";
 
 export const createTransaction = async (req, res) => {
     try {
-      const { TransactionDate, status, agent} = req.body;
+      const { TransactionDate, Status, Agent} = req.body;
   
       const transaction = await Transaction.create({
         TransactionDate,
-        status,
-        agent
+        Status,
+        Agent
       });
   
       res.status(201).json(transaction);
@@ -41,9 +41,9 @@ export const createTransaction = async (req, res) => {
   export const updateStatusTransaction = async (req, res) => {
     try {
       const { id } = req.params;
-      const { TransactionDate, status, agent} = req.body;
+      const { TransactionDate, Status, Agent} = req.body;
       const [updated] = await Transaction.update(
-        { TransactionDate, status, agent  },
+        { TransactionDate, Status, Agent  },
         { where: { id } }
       );
       if (updated) {
