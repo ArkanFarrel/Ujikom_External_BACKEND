@@ -97,13 +97,13 @@
 
 - **Class Diagram**
 
-<img src="./image/UJIKOM-CLASS_DIAGRAM.PNG" />
+<img src="./image/UJIKOM-CLASS_DIAGRAMMM.PNG" />
 
 <br>
 
 - **ERD (Entity Relationship Diagram)**
 
-<img src="https://raw.githubusercontent.com/ArkanFarrel/Ujikom_Internal_BACKEND/main/image/ujikom-erd.jpg" />
+<img src="https://raw.githubusercontent.com/ArkanFarrel/Ujikom_Internal_BACKEND/main/image/ujikom-erdd.jpg" />
 
 <br>
 
