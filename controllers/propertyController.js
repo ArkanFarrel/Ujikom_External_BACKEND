@@ -1,6 +1,6 @@
 import 'dotenv/config'
-import User from "../model/UserModel.js";
-import Transaction from "../model/transaksiModel.js";
+// import User from "../model/UserModel.js";
+// import Transaction from "../model/transaksiModel.js";
 import Property from "../model/propertyModel.js";
 
   export const createProperty = async (req, res) => {
@@ -24,14 +24,14 @@ import Property from "../model/propertyModel.js";
   export const getProperty = async (req, res) => {
     try {
       const property = await Property.findAll({
-        // include: [
-        //   {
-        //     model: User,
-        //   },
-        //   {
-        //     model: Transaction,
-        //   }
-        // ]
+        include: [
+          // {
+          //   model: User,
+          // },
+          // {
+          //   model: Transaction,
+          // }
+        ]
       });
       res.status(200).json(property);
     } catch (error) {
