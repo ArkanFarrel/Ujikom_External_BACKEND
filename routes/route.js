@@ -16,7 +16,7 @@ router.get("/property/find/:id", getPropertyById);
 router.put("/property/update/:id", updateProperty);
 
 // USER
-router.get("/user", verifyToken, getUser);
+router.get("/user", getUser);
 router.get("/user/find/:id",verifyToken, getUserById);
 router.post("/user/post", createUser);
 router.delete("/user/delete/:id", deleteUser);

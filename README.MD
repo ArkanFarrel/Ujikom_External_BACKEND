@@ -110,7 +110,7 @@
 
 - **Usecase Diagram**
 
-<img src="./image/UJIKOM-USECASE_DIAGRAM.PNG" />
+<img src="./image/UJIKOM-USECASE_DIAGRAMM.PNG" />
 
 <br>
 

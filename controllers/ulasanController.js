@@ -22,14 +22,14 @@ export const createUlasan = async (req, res) => {
 export const getUlasan = async (req, res) => {
     try {
       const ulasan = await Ulasan.findAll({
-        include: [
-            {
-                model: User,
-            },
-            {
-                model: Property
-            }
-        ]
+        // include: [
+        //     {
+        //         model: User,
+        //     },
+        //     {
+        //         model: Property
+        //     }
+        // ]
       });
       res.status(200).json(ulasan);
     } catch (error) {

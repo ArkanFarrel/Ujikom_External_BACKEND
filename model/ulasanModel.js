@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import db from "../utils/database.js";
-import Transaction from "./transaksiModel.js";
 
 const Ulasan = db.define(
     "Ulasan",
@@ -13,15 +12,6 @@ const Ulasan = db.define(
         comment: {
             type: DataTypes.TEXT,
         },
-
-        // UserId: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //       model: 'user', 
-        //       key: 'id'
-        //     },
-        //     allowNull: false
-        //   },
         
     },
     {
