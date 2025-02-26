@@ -1,4 +1,4 @@
-# UJIKOM INTERNAL ( BACKEND ) - Property Management Application 
+# UJIKOM EXTERNAL ( BACKEND ) - Property Management Application 
 <br>
 
 ## Deskripsi Projek 
